@@ -36,7 +36,7 @@ OnGameBooted = async() =>
 
     currentClient.Res.status(202).send(connectDataForClient);
 
-    console.log("Game started on port "+currentClient.Req.body.Port +"and is ready to be connected to");
+    console.log("Game started on port "+currentClient.Req.body.Port +" and is ready to be connected to");
 
     currentClient = null;
 }

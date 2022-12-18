@@ -1,3 +1,5 @@
+/* DESNETWARE.NET */
+
 const config = require('config')
 
 //create app
