@@ -1,0 +1,8 @@
+{
+    "server": {
+         "host": "localhost",
+         "port": 5000,
+         "executableName": "MFPS.exe",
+        "matchmakingServerAddress": "localhost"
+    }
+}
