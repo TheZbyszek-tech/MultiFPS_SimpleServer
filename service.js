@@ -4,8 +4,6 @@ const config = require('config')
 var currentClient;
 var bootingGame = false;
 
-
-
 CreateGame = async (req, res) => {
 
     if(bootingGame) return;
@@ -20,7 +18,7 @@ CreateGame = async (req, res) => {
 }
 
 BootServerBuild = (req, res) => {
-    console.log("Delivering game for client on: "+req.ip)
+    console.log(`Delivering game for client on: ${req.ip}`)
     sbl.runServerBuild(req.body.Port, req)
 }
 
@@ -36,7 +34,7 @@ OnGameBooted = async() =>
 
     currentClient.Res.status(202).send(connectDataForClient);
 
-    console.log("Game started on port "+currentClient.Req.body.Port +" and is ready to be connected to");
+    console.log(`Game started on port ${currentClient.Req.body.Port} and is ready to be connected to`);
 
     currentClient = null;
 }

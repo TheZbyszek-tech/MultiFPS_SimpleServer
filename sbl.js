@@ -17,7 +17,7 @@ runServerBuild = function(buildPort, userPreferences){
    exec(`./build/${buildExecutableName}`, parameters, {maxBuffer: 1024 * 500}, function(err, data) {
          if(err) throw err;
 
-         console.log("Launched server instance on port " + buildPort)                    
+         console.log(`Launched server instance on port ${buildPort}`);                    
    });  
 }
 

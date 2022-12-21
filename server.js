@@ -1,4 +1,4 @@
-/* DESNETWARE.NET */
+/* DESNETWARE.NET 2022*/
 
 const config = require('config')
 
@@ -7,7 +7,7 @@ const express = require('express')
 const app = express()
 
 
-//this is here in order to not block web requests from unity client builds
+//this is here in order to not block web requests from unity builds
 const cors = require('cors'); 
 app.use(cors());
 app.options('*', cors());
@@ -21,9 +21,9 @@ app.use(bp.urlencoded({ extended: true }))
 
 //setup endpoint that we will send data to from client build of MultiFPS
 const service = require('./service')
-app.post('/multifps/createGame', service.CreateGame)
+app.post('/client/multifps/createGame', service.CreateGame)
 
-app.get('/multifps/gameBooted', service.OnGameBooted)
+app.get('/server/multifps/gameBooted', service.OnGameBooted)
 
 const port = config.get('server.port');
 const host = config.get('server.host');
